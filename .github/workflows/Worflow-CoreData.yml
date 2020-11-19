@@ -18,6 +18,6 @@ jobs:
       uses: actions/checkout@master
     - name: Build and Test
       run: |
-        xcodebuild clean test -workspace TesteCoreData.xcodeproj -scheme TesteCoreData -destination "${destination}" 
+        xcodebuild clean test -project TesteCoreData.xcodeproj -scheme TesteCoreData -destination "${destination}" 
       env: 
         destination: ${{ matrix.destination }}
